@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry
+		location="C:\Users\user\Desktop\work_folder\mysql-connector-java-5.1.26-bin.jar" />
+	<!-- ↑ MySQLに接続するConnectorJのjarファイルを指定します -->
+	<context id="context1">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/testdb" userId="root"
+			password="admin" />
+		<!-- // ↑ ローカルのMySQLに接続するパスとDB名、それからMySQLのユーザーIDとパスを指定します -->
+		<javaModelGenerator targetPackage="jp\co\sample\customer\biz\model\"
+			targetProject="C:\Users\user\Desktop\work_folder\sample\src\main\java\" />
+		<sqlMapGenerator targetPackage="jp\co\sample\customer\biz\model\"
+			targetProject="C:\Users\user\Desktop\work_folder\sample\src\main\java\" />
+		<javaClientGenerator targetPackage="jp\co\sample\customer\biz\model\"
+			targetProject="C:\Users\user\Desktop\work_folder\sample\src\main\java\"
+			type="XMLMAPPER" />
+		<!-- // ↑ 3行すべてに、MyBatisのクラスを入れたいパッケージ名と、プロジェクトのファイルパスを入れてください -->
+		<table schema="testdb" tableName="rank">
+			<!-- // ↑ DB名とテーブル名を入れてください -->
+		</table>
+	</context>
+</generatorConfiguration>
