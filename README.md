@@ -1,6 +1,7 @@
 # first_project
 
 【フォルダ構成】
+
 main
  ├─java
  │  └─jp
